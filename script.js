@@ -31,3 +31,21 @@ document.querySelectorAll('.step-title').forEach(title => {
         }
     });
 });
+
+// Open the visitor's email application with the contact message prefilled.
+const contactForm = document.querySelector('#contact-form');
+if (contactForm) {
+    contactForm.addEventListener('submit', event => {
+        event.preventDefault();
+        const data = new FormData(contactForm);
+        const recipient = 'w.siffer' + String.fromCharCode(64) + 'outlook.fr';
+        const subject = String(data.get('subject') || 'Message depuis mon portfolio');
+        const body = [
+            `Nom : ${data.get('name')}`,
+            `Adresse e-mail : ${data.get('email')}`,
+            '',
+            String(data.get('message') || '')
+        ].join('\n');
+        window.location.href = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    });
+}

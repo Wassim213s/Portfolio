@@ -23,9 +23,23 @@
                 <div class="contact-box">
                     <h3>Échangeons</h3>
                     <p>Actuellement en 2ᵉ année de BTS SIO SISR à Schola Nova et alternant technicien support à la mairie de Saint-Maur, je développe mes compétences en support informatique, systèmes et réseaux.</p>
+                    <form class="contact-form" id="contact-form">
+                        <label for="contact-name">Votre nom</label>
+                        <input id="contact-name" name="name" type="text" autocomplete="name" required>
+
+                        <label for="contact-email">Votre adresse e-mail</label>
+                        <input id="contact-email" name="email" type="email" autocomplete="email" required>
+
+                        <label for="contact-subject">Sujet</label>
+                        <input id="contact-subject" name="subject" type="text" required>
+
+                        <label for="contact-message">Votre message</label>
+                        <textarea id="contact-message" name="message" rows="6" required></textarea>
+
+                        <button type="submit" class="btn-primary">M'envoyer un message</button>
+                        <p class="contact-note">L’envoi ouvrira votre application de messagerie pour que vous puissiez envoyer le message.</p>
+                    </form>
                     <div class="contact-btns">
-                        <a href="mailto:w.siffer@outlook.fr" class="btn-primary">✉ w.siffer@outlook.fr</a>
-                        <a href="tel:+33752062527" class="btn-secondary">☎ 07 52 06 25 27</a>
                         <a href="https://www.linkedin.com/in/wassim-siffer-3b3700348/" target="_blank" class="btn-secondary">LinkedIn →</a>
                     </div>
                 </div>

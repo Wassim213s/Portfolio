@@ -183,6 +183,21 @@
             font-size: 12px;
         }
 
+        .school-logo { margin: 20px 0 0; }
+        .school-logo img {
+            display: block;
+            width: min(100%, 320px);
+            height: auto;
+            padding: 12px;
+            background: #fff;
+            border: 1px solid var(--border);
+        }
+        .school-logo figcaption {
+            margin-top: 8px;
+            color: var(--muted);
+            font-size: 12px;
+        }
+
         .btn-primary {
             background-color: var(--yellow);
             color: #000;
@@ -717,6 +732,45 @@
             gap: 12px;
             justify-content: center;
             flex-wrap: wrap;
+        }
+
+        .contact-form {
+            display: grid;
+            gap: 10px;
+            text-align: left;
+            margin: 0 auto 24px;
+            max-width: 520px;
+        }
+
+        .contact-form label {
+            margin-top: 8px;
+            color: var(--text);
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1px solid var(--border);
+            background: var(--dark);
+            color: var(--text);
+            font: inherit;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: 1px solid var(--yellow);
+            border-color: var(--yellow);
+        }
+
+        .contact-form textarea { resize: vertical; }
+        .contact-form button { cursor: pointer; border: 0; font: inherit; }
+        .contact-form .contact-note {
+            margin: 4px 0 0;
+            font-size: 12px;
+            text-align: center;
         }
 
         /* ── FOOTER ── */
