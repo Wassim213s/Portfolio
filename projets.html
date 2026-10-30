@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projets · Portfolio Wassim Siffer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="container" style="justify-content: center;">
+            <ul class="nav-links"><li><a href="index.html">Accueil</a></li><li><a href="parcours.html">Parcours</a></li><li><a href="projets.html" aria-current="page">Projets</a></li><li><a href="certifications.html">Certifications</a></li><li><a href="veille.html">Veille</a></li><li><a href="contact.html">Contact</a></li></ul>
+        </nav>
+    </header>
+    <main>
+        <section id="epreuves">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-eyebrow">Épreuve E5</div>
+                    <h2 class="section-title">Tableau de <span>synthèse SISR</span></h2>
+                </div>
+                <div class="hero-cta" style="margin-bottom: 28px;">
+                    <a href="Tableau_Synthese_E5_Wassim.ods" class="btn-primary" download="Tableau_Synthese_E5_Wassim.ods">Télécharger le tableau E5 (ODS)</a>
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <h3>Réseaux & Commutation</h3>
+                        <p>Segmentation VLAN, configuration de trunks 802.1Q, routage inter-VLAN (Router-on-a-Stick), NAT/PAT et adressage IPv4.</p>
+                        <div class="tags">
+                            <span class="tag">VLAN</span>
+                            <span class="tag">Trunk 802.1Q</span>
+                            <span class="tag">NAT/PAT</span>
+                            <span class="tag">IPv4</span>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <h3>Administration Système</h3>
+                        <p>Déploiement Active Directory, gestion DNS/DHCP, création d'OU, comptes et groupes, GPO, partages réseau et permissions NTFS.</p>
+                        <div class="tags">
+                            <span class="tag">Active Directory</span>
+                            <span class="tag">Windows Server</span>
+                            <span class="tag">GPO</span>
+                            <span class="tag">NTFS</span>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <h3>Équipements Cisco</h3>
+                        <p>Configuration de switchs et routeurs en CLI (IOS), débogage avec show interfaces trunk / show vlan brief, simulation Packet Tracer.</p>
+                        <div class="tags">
+                            <span class="tag">Cisco IOS</span>
+                            <span class="tag">Packet Tracer</span>
+                            <span class="tag">CLI</span>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <h3>Virtualisation & Support</h3>
+                        <p>Création et gestion de machines virtuelles sous VirtualBox. Gestion de parc informatique et ticketing avec GLPI (profils admin, technicien, self-service).</p>
+                        <div class="tags">
+                            <span class="tag">VirtualBox</span>
+                            <span class="tag">GLPI</span>
+                            <span class="tag">Helpdesk</span>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <h3>Linux</h3>
+                        <p>Navigation en ligne de commande, gestion de l'arborescence, manipulation de fichiers, gestion des droits et permissions sous distributions Linux.</p>
+                        <div class="tags">
+                            <span class="tag">Bash</span>
+                            <span class="tag">Arborescence</span>
+                            <span class="tag">Permissions</span>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <h3>Cybersécurité & RGPD</h3>
+                        <p>Sensibilisation aux menaces (phishing, ransomware, failles réseau), principes SSI (ANSSI), conformité RGPD et protection des données personnelles.</p>
+                        <div class="tags">
+                            <span class="tag">ANSSI</span>
+                            <span class="tag">RGPD</span>
+                            <span class="tag">SSI</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+<section id="atelier-pro">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-eyebrow">Atelier professionnel · Projet BioTech</div>
+                    <h2 class="section-title">Infrastructure <span>BioTech</span></h2>
+                </div>
+                <div class="hero-cta" style="margin-bottom: 28px;">
+                    <a href="./Wassim_Compte_rendu_BIOTECH.pdf" class="btn-primary" download="Wassim_Compte_rendu_BIOTECH.pdf">Télécharger le compte rendu BioTech (PDF)</a>
+                </div>
+                <div class="projects-grid">
+                    <div class="project-card" style="border-top: 2px solid var(--yellow);">
+                        <div class="project-header">
+                            <div class="project-icon-wrap">🌐</div>
+                            <div class="project-meta">
+                                <div class="project-type">Projet BioTech · Partie Réseau</div>
+                                <h3>Conception de l'infrastructure réseau</h3>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <p class="project-desc">Conception et déploiement d'une infrastructure réseau pour BioTech sur trois étages : segmentation VLAN, routage inter-VLAN, NAT/PAT, DHCP/DNS et connexion Internet sécurisée.</p>
+                            <div class="project-steps">
+                                <div class="step-title">Étapes clés</div>
+                                <ul class="step-list">
+                                    <li>Création de cinq VLAN pour les RH, le bureau d'études, les visiteurs, le management et les serveurs</li>
+                                    <li>Configuration de trois switchs Cisco en mode access et trunk 802.1Q</li>
+                                    <li>Mise en place du routage inter-VLAN avec Router-on-a-Stick</li>
+                                    <li>Configuration du NAT/PAT pour l'accès Internet</li>
+                                    <li>Déploiement du DHCP avec relais et du DNS intranet</li>
+                                    <li>Validation de la connectivité DHCP, DNS et Internet</li>
+                                </ul>
+                            </div>
+                            <div class="project-tech">
+                                <span class="tech-badge">Cisco Packet Tracer</span>
+                                <span class="tech-badge">VLAN</span>
+                                <span class="tech-badge">Trunk 802.1Q</span>
+                                <span class="tech-badge">NAT/PAT</span>
+                                <span class="tech-badge">DHCP</span>
+                                <span class="tech-badge">DNS</span>
+                            </div>
+                        </div>
+                        <div class="project-footer">
+                            <span class="result-label">✓ Infrastructure réseau opérationnelle</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <div class="project-icon-wrap">🖥️</div>
+                            <div class="project-meta">
+                                <div class="project-type">Projet BioTech · Partie Système</div>
+                                <h3>Administration des systèmes et services</h3>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <p class="project-desc">Mise en place de services Windows Server et d'outils de gestion pour centraliser les comptes, sécuriser les accès et suivre le parc informatique de BioTech.</p>
+                            <div class="project-steps">
+                                <div class="step-title">Étapes clés</div>
+                                <ul class="step-list">
+                                    <li>Déploiement d'Active Directory, DNS et DHCP, puis intégration de postes clients au domaine</li>
+                                    <li>Organisation des utilisateurs et des groupes dans des unités adaptées aux services</li>
+                                    <li>Sécurisation des partages avec des droits NTFS et déploiement de lecteurs par GPO</li>
+                                    <li>Intégration de GLPI avec Active Directory/LDAP et inventaire automatisé des postes</li>
+                                    <li>Configuration des habilitations GLPI pour cloisonner l'accès aux équipements par service</li>
+                                </ul>
+                            </div>
+                            <div class="project-tech">
+                                <span class="tech-badge">Windows Server</span>
+                                <span class="tech-badge">Active Directory</span>
+                                <span class="tech-badge">GPO · NTFS</span>
+                                <span class="tech-badge">GLPI · LDAP</span>
+                            </div>
+                        </div>
+                        <div class="project-footer">
+                            <span class="result-label">✓ Comptes, accès et parc centralisés</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+<section id="tp">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-eyebrow">Atelier professionnel · Pratiques</div>
+                    <h2 class="section-title">Travaux <span>pratiques</span></h2>
+                </div>
+                <div class="projects-grid">
+
+                    <!-- GLPI -->
+                    <div class="project-card">
+                        <div class="project-header">
+                            <div class="project-icon-wrap">🎫</div>
+                            <div class="project-meta">
+                                <div class="project-type">TP — Support & Helpdesk</div>
+                                <h3>GLPI — Gestion de Tickets</h3>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <p class="project-desc">Maîtrise du cycle complet d'un ticket d'assistance dans GLPI, des profils utilisateurs à la clôture, en passant par l'assignation et la traçabilité matériel.</p>
+                            <div class="project-steps">
+                                <div class="step-title">Workflow complet</div>
+                                <ul class="step-list">
+                                    <li>Création compte utilisateur "Carl Paul" avec profil Self-Service</li>
+                                    <li>Création du ticket côté utilisateur (urgence, description)</li>
+                                    <li>Prise en charge technicien : auto-assignation + association matériel</li>
+                                    <li>Résolution documentée → statut "Résolu" → validation utilisateur</li>
+                                    <li>Clôture définitive du ticket avec historique complet</li>
+                                </ul>
+                            </div>
+                            <div class="project-tech">
+                                <span class="tech-badge">GLPI</span>
+                                <span class="tech-badge">Ticketing</span>
+                                <span class="tech-badge">Inventaire</span>
+                            </div>
+                        </div>
+                        <div class="project-footer">
+                            <span class="result-label">✓ Cycle ticket maîtrisé</span>
+                        </div>
+                    </div>
+
+                    <!-- VLAN de base -->
+                    <div class="project-card">
+                        <div class="project-header">
+                            <div class="project-icon-wrap">🔀</div>
+                            <div class="project-meta">
+                                <div class="project-type">TP — Réseau</div>
+                                <h3>Segmentation VLAN & DHCP/DNS</h3>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <p class="project-desc">Conception d'un réseau segmenté (3 VLANs : Administration, Production, Invités) avec attribution automatique d'adresses IP et résolution de noms.</p>
+                            <div class="project-steps">
+                                <div class="step-title">Compétences pratiquées</div>
+                                <ul class="step-list">
+                                    <li>Création et attribution de VLANs sur switch</li>
+                                    <li>Ports en mode Access et Trunk</li>
+                                    <li>Serveur DHCP avec plages d'adresses définies</li>
+                                    <li>Résolution de noms opérationnelle</li>
+                                </ul>
+                            </div>
+                            <div class="project-tech">
+                                <span class="tech-badge">VLAN</span>
+                                <span class="tech-badge">DHCP</span>
+                                <span class="tech-badge">DNS</span>
+                                <span class="tech-badge">Packet Tracer</span>
+                            </div>
+                        </div>
+                        <div class="project-footer">
+                            <span class="result-label">✓ Réseau fonctionnel</span>
+                        </div>
+                    </div>
+
+                    <!-- VirtualBox / Linux -->
+                    <div class="project-card">
+                        <div class="project-header">
+                            <div class="project-icon-wrap">🐧</div>
+                            <div class="project-meta">
+                                <div class="project-type">TP — Virtualisation & Système</div>
+                                <h3>VirtualBox & Linux</h3>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <p class="project-desc">Déploiement de machines virtuelles sous VirtualBox pour tester différents OS et configurations réseau. Prise en main de Linux en ligne de commande.</p>
+                            <div class="project-steps">
+                                <div class="step-title">Compétences pratiquées</div>
+                                <ul class="step-list">
+                                    <li>Installation et configuration de VMs (RAM, stockage, réseau)</li>
+                                    <li>Navigation dans l'arborescence Linux (ls, cd, pwd, mkdir…)</li>
+                                    <li>Gestion des fichiers et des permissions (chmod, chown)</li>
+                                    <li>Isolation des environnements de test</li>
+                                </ul>
+                            </div>
+                            <div class="project-tech">
+                                <span class="tech-badge">VirtualBox</span>
+                                <span class="tech-badge">Linux</span>
+                                <span class="tech-badge">CLI</span>
+                                <span class="tech-badge">Bash</span>
+                            </div>
+                        </div>
+                        <div class="project-footer">
+                            <span class="result-label">✓ Environnements opérationnels</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>© 2025–2027 · Siffer Wassim · BTS SIO SISR · École Schola Nova</p>
+        </div>
+    </footer>
+    <script defer src="script.js"></script>
+</body>
+</html>
+
