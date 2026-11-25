@@ -198,6 +198,32 @@
             font-size: 12px;
         }
 
+        .document-preview {
+            margin: 24px 0 36px;
+            padding: 20px;
+            border: 1px solid var(--border);
+            background: var(--card);
+        }
+        .document-preview h3 {
+            margin-bottom: 8px;
+            font-family: 'Space Mono', monospace;
+            font-size: 16px;
+            color: var(--yellow);
+        }
+        .document-preview p {
+            margin-bottom: 14px;
+            color: var(--muted);
+            font-size: 13px;
+        }
+        .document-preview iframe {
+            display: block;
+            width: 100%;
+            border: 1px solid var(--border);
+            background: #fff;
+        }
+        .pdf-preview iframe { height: 760px; }
+        .sheet-preview iframe { height: 720px; }
+
         .btn-primary {
             background-color: var(--yellow);
             color: #000;
@@ -825,6 +851,9 @@
             .stat-bar { grid-template-columns: repeat(2, 1fr); }
             .timeline-item { grid-template-columns: 1fr; gap: 8px; }
             .contact-box { padding: 32px 24px; }
+            .pdf-preview iframe { height: 620px; }
+            .sheet-preview { padding: 12px; }
+            .sheet-preview iframe { height: 680px; }
             .nav-links { gap: 12px; font-size: 13px; flex-wrap: wrap; justify-content: center; }
         }
 
