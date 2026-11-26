@@ -217,9 +217,34 @@
             border-radius: 50%;
             box-shadow: 0 0 22px rgba(255,217,0,0.08), inset 0 0 18px rgba(255,217,0,0.05);
         }
-        .orbit-ring-a { transform: rotateX(68deg) rotateZ(-24deg); }
-        .orbit-ring-b { inset: 30px; transform: rotateY(68deg) rotateZ(30deg); border-color: rgba(255,255,255,0.45); }
-        .orbit-ring-c { inset: 42px; transform: rotateX(22deg) rotateY(45deg); border-color: rgba(255,217,0,0.35); }
+        .orbit-ring-a {
+            transform: rotateX(68deg) rotateZ(-24deg);
+            animation: atomRingA 13s linear infinite;
+        }
+        .orbit-ring-b {
+            inset: 30px;
+            transform: rotateY(68deg) rotateZ(30deg);
+            border-color: rgba(255,255,255,0.45);
+            animation: atomRingB 17s linear infinite;
+        }
+        .orbit-ring-c {
+            inset: 42px;
+            transform: rotateX(22deg) rotateY(45deg);
+            border-color: rgba(255,217,0,0.35);
+            animation: atomRingC 21s linear infinite;
+        }
+        @keyframes atomRingA {
+            from { transform: rotateX(68deg) rotateZ(-24deg) rotateY(0deg); }
+            to { transform: rotateX(68deg) rotateZ(-24deg) rotateY(360deg); }
+        }
+        @keyframes atomRingB {
+            from { transform: rotateY(68deg) rotateZ(30deg) rotateX(0deg); }
+            to { transform: rotateY(68deg) rotateZ(30deg) rotateX(360deg); }
+        }
+        @keyframes atomRingC {
+            from { transform: rotateX(22deg) rotateY(45deg) rotateZ(0deg); }
+            to { transform: rotateX(22deg) rotateY(45deg) rotateZ(360deg); }
+        }
         .orbit-cube {
             position: absolute;
             top: 50%; left: 50%;
@@ -1213,4 +1238,9 @@ header::before {
 
 @media (prefers-reduced-motion: reduce) {
     header::before { animation: none; }
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+    .orbit-ring-a, .orbit-ring-b, .orbit-ring-c, .cube-core { animation: none; }
 }
