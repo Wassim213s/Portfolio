@@ -1169,7 +1169,7 @@
             .nav-links { gap: 12px; font-size: 13px; flex-wrap: wrap; justify-content: center; }
         }
 
-        @media (max-width: 1200px) {
+        @media (max-width: 900px) {
             .hero-binary, .hero-orbit { display: none; }
         }
 
@@ -1243,4 +1243,14 @@ header::before {
 
 @media (prefers-reduced-motion: reduce) {
     .orbit-ring-a, .orbit-ring-b, .orbit-ring-c, .cube-core { animation: none; }
+}
+
+
+.hero-orbit { animation: atomAssemblySpin 26s linear infinite; }
+@keyframes atomAssemblySpin {
+    from { transform: translateY(-50%) rotateZ(0deg); }
+    to { transform: translateY(-50%) rotateZ(360deg); }
+}
+@media (prefers-reduced-motion: reduce) {
+    .hero-orbit { animation: none; }
 }
