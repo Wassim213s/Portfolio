@@ -28,6 +28,30 @@
             overflow-x: hidden;
         }
 
+        /* Yellow ambient light shared by every portfolio page */
+        body::after {
+            content: '';
+            position: fixed;
+            inset: -12%;
+            z-index: 2;
+            pointer-events: none;
+            background:
+                radial-gradient(ellipse 30rem 26rem at 7% 13%, rgba(255, 217, 0, 0.2), transparent 74%),
+                radial-gradient(ellipse 28rem 25rem at 94% 82%, rgba(255, 217, 0, 0.16), transparent 75%);
+            mix-blend-mode: screen;
+            opacity: 0.88;
+            animation: ambientYellowGlow 7s ease-in-out infinite alternate;
+        }
+
+        @keyframes ambientYellowGlow {
+            from { opacity: 0.62; }
+            to { opacity: 0.98; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            body::after { animation: none; }
+        }
+
         /* ── NOISE TEXTURE OVERLAY ── */
         body::before {
             content: '';
