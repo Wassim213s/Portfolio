@@ -128,15 +128,37 @@
         .orbit-ring-a { transform: rotateX(68deg) rotateZ(-24deg); }
         .orbit-ring-b { inset: 30px; transform: rotateY(68deg) rotateZ(30deg); border-color: rgba(255,255,255,0.45); }
         .orbit-ring-c { inset: 42px; transform: rotateX(22deg) rotateY(45deg); border-color: rgba(255,217,0,0.35); }
-        .orbit-core {
+        .orbit-cube {
             position: absolute;
             top: 50%; left: 50%;
-            width: 42px; height: 42px;
-            border: 1px solid var(--yellow);
-            background: linear-gradient(145deg, rgba(255,217,0,0.75), rgba(255,217,0,0.08));
-            box-shadow: 0 0 36px rgba(255,217,0,0.32);
-            transform: translate(-50%,-50%) rotateX(18deg) rotateY(35deg) rotateZ(45deg);
+            width: 56px; height: 56px;
+            transform: translate(-50%,-50%);
+            perspective: 600px;
         }
+        .cube-core {
+            position: relative;
+            width: 100%; height: 100%;
+            transform-style: preserve-3d;
+            animation: cubeSpin 14s linear infinite;
+        }
+        .cube-face {
+            position: absolute;
+            inset: 0;
+            display: grid;
+            place-items: center;
+            border: 1px solid rgba(255,217,0,0.85);
+            background: linear-gradient(145deg, rgba(255,217,0,0.36), rgba(17,18,20,0.78));
+            color: var(--yellow);
+            font: 700 12px 'Space Mono', monospace;
+            box-shadow: inset 0 0 18px rgba(255,217,0,0.12);
+        }
+        .cube-front { transform: translateZ(28px); }
+        .cube-back { transform: rotateY(180deg) translateZ(28px); }
+        .cube-right { transform: rotateY(90deg) translateZ(28px); }
+        .cube-left { transform: rotateY(-90deg) translateZ(28px); }
+        .cube-top { transform: rotateX(90deg) translateZ(28px); }
+        .cube-bottom { transform: rotateX(-90deg) translateZ(28px); }
+        @keyframes cubeSpin { to { transform: rotateX(360deg) rotateY(360deg); } }
         .orbit-node {
             position: absolute;
             top: 22px; right: 34px;
@@ -184,6 +206,40 @@
             max-width: 500px;
             line-height: 1.7;
         }
+
+        .hero-tech-strip {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 9px;
+            max-width: 720px;
+            margin: 30px auto 0;
+            perspective: 700px;
+        }
+        .hero-tech-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            padding: 9px 13px;
+            border: 1px solid transparent;
+            background: linear-gradient(var(--card),var(--card)) padding-box,
+                        linear-gradient(135deg,rgba(255,217,0,.68),rgba(255,255,255,.08),rgba(255,217,0,.25)) border-box;
+            color: #ddd;
+            font: 11px 'Space Mono',monospace;
+            box-shadow: 0 8px 22px rgba(0,0,0,.22);
+            transition: transform .22s ease, box-shadow .22s ease, color .22s ease;
+            animation: chipRise .65s ease both;
+        }
+        .hero-tech-chip:nth-child(2) { animation-delay: .08s; }
+        .hero-tech-chip:nth-child(3) { animation-delay: .16s; }
+        .hero-tech-chip:nth-child(4) { animation-delay: .24s; }
+        .hero-tech-chip b { color: var(--yellow); font-size: 9px; }
+        .hero-tech-chip:hover {
+            transform: translateY(-5px) rotateX(8deg);
+            color: #fff;
+            box-shadow: 0 14px 28px rgba(255,217,0,.13);
+        }
+        @keyframes chipRise { from { opacity: 0; transform: translateY(12px) rotateX(-12deg); } to { opacity: 1; transform: translateY(0) rotateX(0); } }
 
         .hero-cta {
             display: flex;
@@ -983,6 +1039,8 @@
         /* ── RESPONSIVE ── */
         @media (max-width: 768px) {
             .hero h1 { font-size: 34px; }
+            .hero-tech-strip { gap: 7px; margin-top: 22px; }
+            .hero-tech-chip { padding: 8px 10px; font-size: 10px; }
             .hero-inner { grid-template-columns: 1fr; }
             .hero-avatar { display: none; }
             .stat-bar { grid-template-columns: repeat(2, 1fr); }
