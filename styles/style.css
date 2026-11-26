@@ -36,6 +36,8 @@
             z-index: 2;
             pointer-events: none;
             background:
+                repeating-linear-gradient(90deg, rgba(255, 217, 0, 0.025) 0 1px, transparent 1px 88px),
+                repeating-linear-gradient(0deg, rgba(255, 217, 0, 0.02) 0 1px, transparent 1px 88px),
                 radial-gradient(ellipse 30rem 26rem at 7% 13%, rgba(255, 217, 0, 0.2), transparent 74%),
                 radial-gradient(ellipse 28rem 25rem at 94% 82%, rgba(255, 217, 0, 0.16), transparent 75%);
             mix-blend-mode: screen;
@@ -1160,3 +1162,55 @@
 
 .nav-links a[aria-current='page'] { color: var(--yellow); }
 
+
+
+/* Shared decorative details for every portfolio page */
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(255, 217, 0, 0.3), var(--yellow), rgba(255, 217, 0, 0.3), transparent);
+    background-size: 200% 100%;
+    animation: headerLightSweep 9s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes headerLightSweep {
+    from { background-position: 100% 0; }
+    to { background-position: -100% 0; }
+}
+
+.section-header {
+    position: relative;
+}
+
+.section-header::before {
+    content: '';
+    position: absolute;
+    top: -18px;
+    left: 0;
+    width: 46px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--yellow) 0 62%, transparent 62% 76%, rgba(255, 217, 0, 0.5) 76%);
+    box-shadow: 0 0 14px rgba(255, 217, 0, 0.28);
+}
+
+.section-header::after {
+    content: '';
+    position: absolute;
+    top: -22px;
+    left: 54px;
+    width: 9px;
+    height: 9px;
+    border: 1px solid rgba(255, 217, 0, 0.72);
+    transform: rotate(45deg);
+    opacity: 0.72;
+    pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    header::before { animation: none; }
+}
