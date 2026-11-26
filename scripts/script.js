@@ -9,6 +9,19 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+// Continuously refresh the decorative binary lines on the home page.
+const binaryLines = document.querySelectorAll('[data-binary-line]');
+if (binaryLines.length) {
+    const randomBits = length => Array.from({ length }, () => Math.random() < 0.5 ? '0' : '1').join('');
+    const updateBinary = () => binaryLines.forEach(line => {
+        line.textContent = randomBits(24);
+    });
+    updateBinary();
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        window.setInterval(updateBinary, 360);
+    }
+}
+
 // Expandable project process lists.
 document.querySelectorAll('.step-title').forEach(title => {
     const list = title.parentElement.querySelector('.step-list');
@@ -80,3 +93,4 @@ if (contactForm) {
         window.location.href = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     });
 }
+
