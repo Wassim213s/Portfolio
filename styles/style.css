@@ -18,6 +18,11 @@
         body {
             font-family: 'DM Sans', sans-serif;
             background-color: var(--black);
+            background-image:
+                radial-gradient(ellipse 42rem 34rem at 8% 12%, rgba(255, 217, 0, 0.075), transparent 72%),
+                radial-gradient(ellipse 36rem 30rem at 94% 68%, rgba(255, 217, 0, 0.045), transparent 74%);
+            background-attachment: fixed;
+            background-repeat: no-repeat;
             color: var(--text);
             line-height: 1.6;
             overflow-x: hidden;
