@@ -467,6 +467,14 @@
             background: var(--border);
         }
 
+        #atelier-pro .enterprise-project-grid {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        @media (max-width: 760px) {
+            #atelier-pro .enterprise-project-grid { grid-template-columns: 1fr; }
+        }
+
         .project-card {
             background: var(--card);
             display: flex;
@@ -919,3 +927,4 @@
         .hero .hero-cta { animation-delay: 0.4s; }
 
 .nav-links a[aria-current='page'] { color: var(--yellow); }
+
