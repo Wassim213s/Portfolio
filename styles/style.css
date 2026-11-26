@@ -210,6 +210,44 @@
             font-size: 16px;
             color: var(--yellow);
         }
+        .document-preview-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            margin-bottom: 12px;
+        }
+        .document-preview-header h3 { margin: 0; }
+        .preview-fullscreen {
+            display: inline-grid;
+            place-items: center;
+            flex: 0 0 auto;
+            width: 42px;
+            height: 42px;
+            border: 1px solid var(--border);
+            background: var(--dark);
+            color: var(--yellow);
+            cursor: pointer;
+            transition: background 0.2s, border-color 0.2s, transform 0.15s;
+        }
+        .preview-fullscreen:hover {
+            background: var(--card2);
+            border-color: var(--yellow);
+            transform: translateY(-1px);
+        }
+        .preview-fullscreen:focus-visible {
+            outline: 2px solid var(--yellow);
+            outline-offset: 3px;
+        }
+        .preview-fullscreen svg {
+            width: 20px;
+            height: 20px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
         .document-preview p {
             margin-bottom: 14px;
             color: var(--muted);
@@ -223,6 +261,17 @@
         }
         .pdf-preview iframe { height: 760px; }
         .sheet-preview iframe { height: 720px; }
+        .document-preview:fullscreen {
+            width: 100vw;
+            height: 100vh;
+            max-width: none;
+            margin: 0;
+            padding: 20px;
+            overflow: auto;
+            border: 0;
+            background: var(--black);
+        }
+        .document-preview:fullscreen iframe { height: calc(100vh - 124px); }
 
         .btn-primary {
             background-color: var(--yellow);

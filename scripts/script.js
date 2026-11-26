@@ -32,6 +32,37 @@ document.querySelectorAll('.step-title').forEach(title => {
     });
 });
 
+// Expand CV and spreadsheet previews to the full browser window.
+document.querySelectorAll('.document-preview').forEach(preview => {
+    const button = preview.querySelector('.preview-fullscreen');
+    if (!button) return;
+
+    const syncLabel = () => {
+        const isFullscreen = document.fullscreenElement === preview;
+        const label = isFullscreen ? button.dataset.exitLabel : button.dataset.fullscreenLabel;
+        button.setAttribute('aria-label', label);
+        button.setAttribute('title', label);
+    };
+
+    button.addEventListener('click', async () => {
+        try {
+            if (document.fullscreenElement === preview) {
+                await document.exitFullscreen();
+            } else if (preview.requestFullscreen) {
+                await preview.requestFullscreen();
+            } else {
+                const frame = preview.querySelector('iframe');
+                if (frame) window.open(frame.src, '_blank', 'noopener');
+            }
+        } catch (error) {
+            const frame = preview.querySelector('iframe');
+            if (frame) window.open(frame.src, '_blank', 'noopener');
+        }
+    });
+
+    document.addEventListener('fullscreenchange', syncLabel);
+});
+
 // Open the visitor's email application with the contact message prefilled.
 const contactForm = document.querySelector('#contact-form');
 if (contactForm) {
